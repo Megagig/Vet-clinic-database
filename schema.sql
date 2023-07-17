@@ -7,4 +7,5 @@ CREATE TABLE animals(id integer NOT NULL default nextval('seq_id'),
  neutered boolean,
  weight_kg float,
  primary key(id));
+
  
