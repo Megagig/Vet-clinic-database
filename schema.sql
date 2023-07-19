@@ -8,4 +8,4 @@ CREATE TABLE animals(id integer NOT NULL default nextval('seq_id'),
  weight_kg float,
  primary key(id));
 
- 
+ ALTER TABLE animals ADD COLUMN species VARCHAR(50);
