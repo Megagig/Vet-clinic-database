@@ -23,3 +23,6 @@ ROLLBACK;
 --Verify that the transaction was successful
 SELECT * FROM animals;
 
+--Update the species colunm
+UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
+UPDATE animals SET species = 'pokemon' WHERE species IS NULL;
