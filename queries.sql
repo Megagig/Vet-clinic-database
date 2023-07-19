@@ -86,3 +86,13 @@ FROM
     animals
 GROUP BY
     neutered;
+
+SELECT
+    MIN(weight_kg)
+FROM
+    animals;
+
+SELECT
+    MAX(weight_kg)
+FROM
+    animals;
