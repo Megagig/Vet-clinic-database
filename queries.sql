@@ -53,4 +53,11 @@ SET
     weight_kg = weight_kg * -1
 WHERE
     weight_kg < 0;
+
 COMMIT;
+
+ SELECT COUNT(*) FROM animals;
+
+ SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
+
+ SELECT AVG(weight_kg) FROM animals;
