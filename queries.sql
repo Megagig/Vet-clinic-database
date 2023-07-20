@@ -111,3 +111,9 @@ FROM
 WHERE
     date_of_birth BETWEEN 'Jan 01,1990'
     AND 'Dec 31,2000';
+
+
+    SELECT a.name 
+FROM animals a
+JOIN owners o ON a.owner_id = o.id
+WHERE o.full_name = 'Melody Pond';
