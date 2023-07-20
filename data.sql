@@ -36,3 +36,15 @@ SET species_id = s.id
 FROM species s
 WHERE (a.name LIKE '%mon' AND s.name = 'Digimon')
    OR (a.name NOT LIKE '%mon' AND s.name = 'Pokemon');
+
+   UPDATE animals a
+SET owner_id = o.id
+FROM owners o
+WHERE o.full_name IN ('Sam Smith', 'Jennifer Orwell', 'Bob', 'Melody Pond', 'Dean Winchester')
+  AND (
+    (a.name = 'Agumon' AND o.full_name = 'Sam Smith')
+    OR (a.name IN ('Gabumon', 'Pikachu') AND o.full_name = 'Jennifer Orwell')
+    OR (a.name IN ('Devimon', 'Plantmon') AND o.full_name = 'Bob')
+    OR (a.name IN ('Charmander', 'Squirtle', 'Blossom') AND o.full_name = 'Melody Pond')
+    OR (a.name IN ('Angemon', 'Boarmon') AND o.full_name = 'Dean Winchester')
+  );
